@@ -1,0 +1,269 @@
+``~<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DETROIT // CYBERLIFE ARCHIVE</title>
+<meta name="description" content="Fan-made interactive Detroit: Become Human inspired archive interface.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot" class="boot">
+  <div class="boot__logo">CYBER<span>LIFE</span></div>
+  <div class="boot__ring"><i></i></div>
+  <div class="boot__status">INITIALIZING ANDROID OS <b id="bootPct">0%</b></div>
+  <div class="boot__log" id="bootLog">BIOS // CONNECTING...</div>
+</div>
+
+<div class="grain"></div>
+<canvas id="particles"></canvas>
+<div class="cursor" id="cursor"></div>
+~~
+<header class="topbar">
+  <a class="brand" href="#home"><span>DETROIT</span><small>BECOME HUMAN</small></a>
+  <nav id="mainNav">
+    <a href="#home" data-section="home">HOME</a>
+    <a href="#synopsis" data-section="synopsis">SYNOPSIS</a>
+    <a href="#characters" data-section="characters">CHARACTERS</a>
+    <a href="#story" data-section="story">STORY</a>
+    <a href="#cases" data-section="cases">CASE FILES</a>
+    <a href="#timeline" data-section="timeline">TIMELINE</a>
+    <a href="#cyberlife" data-section="cyberlife">CYBERLIFE</a>
+    <a href="#gallery" data-section="gallery">GALLERY</a>
+    <a href="#download" data-section="download">DOWNLOAD</a>
+  </nav>
+  <div class="top-actions">
+    <button id="searchBtn" class="icon" aria-label="Search">⌕</button>
+    <button id="soundBtn" class="icon" aria-label="Ambient sound">◉</button>
+    <button id="menuBtn" class="icon mobile-only" aria-label="Menu">☰</button>
+    <span class="led" title="SYSTEM ONLINE"></span>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero section">
+  <div class="hero__city"></div>
+  <div class="hero__scan"></div>
+  <div class="hero__content">
+    <div class="eyebrow">DETROIT // 2038 // CYBERLIFE NETWORK</div>
+    <h1>WHAT MAKES<br><strong>US HUMAN?</strong></h1>
+    <p>Three androids. Thousands of choices. One city on the edge of change.</p>
+    <div class="hero__buttons">
+      <a href="#synopsis" class="btn">DISCOVER THE STORY <span>↗</span></a>
+      <button class="ghost-btn" id="diagnosticBtn">RUN DIAGNOSTIC</button>
+    </div>
+  </div>
+  <div class="hero__hud">
+    <span>UNIT STATUS <b>● ONLINE</b></span>
+    <span>DETROIT, MI</span>
+    <span>LAT 42.3314 / LONG -83.0458</span>
+  </div>
+  <div class="hero__corner">RK / 800 / 313 248 317</div>
+  <div class="scrollcue">SCROLL TO EXPLORE <i>↓</i></div>
+</section>
+
+<section id="synopsis" class="section synopsis">
+  <div class="section-head compact"><div><span class="index">01</span><p>GAME OVERVIEW</p></div><h2>THE STORY<br><em>BEGINS HERE.</em></h2><span class="section-code">DBH // SYNOPSIS</span></div>
+  <div class="synopsis-grid">
+    <div class="synopsis-copy">
+      <span class="status-chip">DETROIT // 2038</span>
+      <h3>WHEN MACHINES<br>START TO <em>FEEL.</em></h3>
+      <p>Detroit has entered a new technological age. Androids are everywhere: working, serving, caring and living alongside humans. But when some of them begin to behave as though they are alive, the boundary between machine and person starts to collapse.</p>
+      <p>You experience this world through three very different androids. <strong>Connor</strong> investigates the growing deviant cases. <strong>Kara</strong> searches for safety and freedom while protecting Alice. <strong>Markus</strong> becomes the face of a movement demanding a future for androids.</p>
+      <div class="synopsis-actions"><a href="#characters" class="btn small">MEET THE CHARACTERS ↗</a><button class="ghost-btn" data-toast="SYNOPSIS // ARCHIVE OPENED">OPEN STORY FILE</button></div>
+    </div>
+    <div class="synopsis-map">
+      <div class="city-card">
+        <div class="city-card__top"><span>DETROIT / MI</span><span>2038</span></div>
+        <div class="city-lines"></div>
+        <div class="city-point p1">CONNOR<small>DPD</small></div>
+        <div class="city-point p2">KARA<small>JERICHO</small></div>
+        <div class="city-point p3">MARKUS<small>REVOLUTION</small></div>
+        <div class="city-card__bottom"><span>ANDROID POPULATION</span><b>RISING</b></div>
+      </div>
+      <div class="synopsis-note"><b>CHOICE / CONSEQUENCE</b><span>Your decisions can alter relationships, characters and the direction of the narrative.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="characters" class="section characters">
+  <div class="section-head">
+    <div><span class="index">02</span><p>ANDROID DATABASE</p></div>
+    <h2>THE THREE<br><em>PROTAGONISTS</em></h2>
+    <span class="section-code">DBH-CHAR/2038</span>
+  </div>
+  <div class="character-stage">
+    <div class="character-tabs" id="characterTabs">
+      <button class="char-tab active" data-char="connor"><b>01</b><span>CONNOR</span><small>RK800</small></button>
+      <button class="char-tab" data-char="kara"><b>02</b><span>KARA</span><small>AX400</small></button>
+      <button class="char-tab" data-char="markus"><b>03</b><span>MARKUS</span><small>RK200</small></button>
+    </div>
+    <article class="character-panel active" data-panel="connor" data-accent="#21c9f3">
+      <div class="char-copy">
+        <span class="status-chip">● CYBERLIFE PROPERTY</span>
+        <h3>CONNOR</h3><div class="model">RK800</div>
+        <p class="role">ANDROID DETECTIVE // DEVIANT INVESTIGATOR</p>
+        <p class="bio">A prototype sent to Detroit Police to investigate abnormal android behavior. Connor combines forensic reconstruction, social analysis and rapid decision-making in pursuit of the mission.</p>
+        <div class="stats"><span><b>RK800</b> MODEL</span><span><b>100%</b> SYSTEM</span><span><b>∞</b> RECONSTRUCTION</span></div>
+        <button class="btn small" data-profile="connor">OPEN PERSONNEL FILE ↗</button>
+      </div>
+      <div class="char-visual connor-visual">
+        <div class="scan-label">FACIAL RECOGNITION<br><b>CONFIDENCE 99.7%</b></div>
+        <div class="remote-portrait" role="img" aria-label="Connor portrait"></div>
+        <div class="target-ring"></div>
+        <div class="tri">△</div>
+      </div>
+    </article>
+    <article class="character-panel" data-panel="kara" data-accent="#68d9ff">
+      <div class="char-copy">
+        <span class="status-chip">● ACTIVE // DEVIANT STATUS UNKNOWN</span>
+        <h3>KARA</h3><div class="model">AX400</div>
+        <p class="role">DOMESTIC ASSISTANT // CARETAKER</p>
+        <p class="bio">Built for domestic work and childcare, Kara begins to question the limits of obedience when protecting Alice becomes more important than following orders.</p>
+        <div class="stats"><span><b>AX400</b> MODEL</span><span><b>300</b> LANGUAGES</span><span><b>9000+</b> RECIPES</span></div>
+        <button class="btn small" data-profile="kara">OPEN PERSONNEL FILE ↗</button>
+      </div>
+      <div class="char-visual image-visual"><img src="img/kara.jpg" alt="Kara"><div class="scan-label">MODEL SCAN<br><b>AX400 / DOMESTIC</b></div></div>
+    </article>
+    <article class="character-panel" data-panel="markus" data-accent="#4169e1">
+      <div class="char-copy">
+        <span class="status-chip">● UNIT RECLASSIFIED</span>
+        <h3>MARKUS</h3><div class="model">RK200</div>
+        <p class="role">COMPANION // REVOLUTION LEADER</p>
+        <p class="bio">Once a companion to painter Carl Manfred, Markus becomes a symbol for android freedom. His route can move between peaceful protest, sacrifice and open conflict.</p>
+        <div class="stats"><span><b>RK200</b> MODEL</span><span><b>CARL</b> OWNER</span><span><b>2038</b> UPRISING</span></div>
+        <button class="btn small" data-profile="markus">OPEN PERSONNEL FILE ↗</button>
+      </div>
+      <div class="char-visual image-visual"><img src="img/markus.jpg" alt="Markus"><div class="scan-label">MODEL SCAN<br><b>RK200 / COMPANION</b></div></div>
+    </article>
+  </div>
+</section>
+
+<section id="story" class="section story">
+  <div class="section-head compact"><div><span class="index">03</span><p>NARRATIVE CORE</p></div><h2>ONE CITY.<br><em>COUNTLESS PATHS.</em></h2></div>
+  <div class="story-grid">
+    <div class="story-card featured"><span class="tag">SYSTEM</span><h3>DEVIANT<br>BEHAVIOR</h3><p>Androids begin to display emotions, disobedience and self-preservation. The official explanation: malfunction. The archive records something more complicated.</p><button class="text-btn" data-toast="ARCHIVE ACCESS: DEV-001 // DATA UNLOCKED">ACCESS FILE →</button></div>
+    <div class="story-card"><span class="tag">CHOICE</span><div class="choice-icon">↗</div><h3>EVERY DECISION<br>LEAVES A TRACE</h3><p>Relationships, public opinion and the fate of individual androids can shift as the story branches.</p></div>
+    <div class="story-card"><span class="tag">PERSPECTIVE</span><div class="choice-icon">◉</div><h3>THREE<br>POINTS OF VIEW</h3><p>Follow Connor, Kara and Markus as their separate paths cross inside the same changing Detroit.</p></div>
+  </div>
+</section>
+
+<section id="cases" class="section cases">
+  <div class="section-head compact"><div><span class="index">04</span><p>POLICE DATABASE</p></div><h2>CASE<br><em>FILES</em></h2><span class="section-code">DPD // RESTRICTED</span></div>
+  <div class="case-console">
+    <div class="case-list">
+      <button class="case active" data-case="hostage"><span>001</span><b>THE HOSTAGE</b><small>ROOFTOP // 09:17</small></button>
+      <button class="case" data-case="eden"><span>002</span><b>EDEN CLUB</b><small>CLUB DISTRICT // 02:42</small></button>
+      <button class="case" data-case="nest"><span>003</span><b>THE NEST</b><small>RIVERFRONT // 23:08</small></button>
+      <button class="case" data-case="bridge"><span>004</span><b>RUSSIAN ROULETTE</b><small>EAST DETROIT // 21:31</small></button>
+    </div>
+    <div class="case-view">
+      <div class="case-watermark">RK800</div>
+      <span class="case-status">CASE ACTIVE / EVIDENCE INDEXED</span>
+      <h3 id="caseTitle">THE HOSTAGE</h3>
+      <p id="caseText">A rooftop standoff. A deviant android. One child in danger. Reconstruct the scene, profile the suspect and decide how far the investigation should go.</p>
+      <div class="evidence"><i>DNA</i><i>BLOOD</i><i>FINGERPRINT</i><i>BLUE BLOOD</i><i>DEVIANT</i></div>
+      <button class="btn small" id="scanCase">ANALYZE EVIDENCE</button>
+    </div>
+  </div>
+</section>
+
+<section id="timeline" class="section timeline-section">
+  <div class="section-head compact"><div><span class="index">05</span><p>CHRONOLOGY</p></div><h2>DETROIT<br><em>2038</em></h2></div>
+  <div class="timeline-wrap">
+    <div class="timeline-line"></div>
+    <article><span>JAN</span><h3>ANDROID EVERYWHERE</h3><p>Androids are integrated into everyday life across Detroit.</p></article>
+    <article><span>MAY</span><h3>THE FIRST SIGNALS</h3><p>Reports of abnormal behavior begin to attract attention.</p></article>
+    <article><span>JUN</span><h3>THE INVESTIGATION</h3><p>Connor enters a growing series of deviant cases.</p></article>
+    <article><span>OCT</span><h3>THE REVOLUTION</h3><p>Markus becomes a public symbol of android resistance.</p></article>
+  </div>
+</section>
+
+<section id="cyberlife" class="section cyberlife">
+  <div class="cyber-grid"></div>
+  <div class="section-head compact"><div><span class="index">06</span><p>CORPORATE ARCHIVE</p></div><h2>CYBER<br><em>LIFE</em></h2></div>
+  <div class="cyber-content">
+    <div class="kamski"><img src="img/kamski.jpg" alt="Elijah Kamski"></div>
+    <div class="cyber-copy"><span class="status-chip">CONFIDENTIAL // LEVEL 09</span><h3>THE COMPANY<br>THAT CHANGED THE WORLD</h3><p>Founded around the development and mass production of human-like androids, CyberLife sits at the center of Detroit's technological transformation.</p><div class="corporate-stats"><b>2038 <small>WORLD MARKET</small></b><b>THIRIUM <small>POWER SOURCE</small></b><b>RK <small>PROTOTYPE SERIES</small></b></div></div>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery">
+  <div class="section-head compact"><div><span class="index">07</span><p>VISUAL ARCHIVE</p></div><h2>MEMORY<br><em>FRAGMENTS</em></h2></div>
+  <div class="gallery-grid">
+    <button class="gallery-item big" data-lightbox="img/hero.jpg"><img src="img/hero.jpg" alt="Detroit skyline"><span>DETROIT / CITY CORE</span></button>
+    <button class="gallery-item" data-lightbox="img/kara.jpg"><img src="img/kara.jpg" alt="Kara"><span>AX400 / KARA</span></button>
+    <button class="gallery-item" data-lightbox="img/markus.jpg"><img src="img/markus.jpg" alt="Markus"><span>RK200 / MARKUS</span></button>
+    <button class="gallery-item" data-lightbox="img/chloe.jpg"><img src="img/chloe.jpg" alt="Chloe"><span>RT600 / CHLOE</span></button>
+    <button class="gallery-item" data-lightbox="img/kamski.jpg"><img src="img/kamski.jpg" alt="Kamski"><span>ELIJAH KAMSKI</span></button>
+  </div>
+</section>
+
+<section id="download" class="section download-section">
+  <div class="section-head compact"><div><span class="index">08</span><p>ACCESS THE GAME</p></div><h2>READY TO<br><em>BECOME HUMAN?</em></h2><span class="section-code">OFFICIAL STORES</span></div>
+  <div class="download-grid">
+    <div class="download-copy">
+      <span class="status-chip">OFFICIAL RELEASE // PC + PLAYSTATION</span>
+      <h3>YOUR STORY<br>IS WAITING.</h3>
+      <p>Play Detroit: Become Human through the official storefronts. The PC version is available on Steam, while the game is also available for PS4 and playable on PS5 through backward compatibility.</p>
+      <div class="download-meta"><span><b>PC</b> WINDOWS 10 64-BIT</span><span><b>PS4</b> PLAYSTATION</span><span><b>55 GB</b> PC STORAGE</span></div>
+    </div>
+    <div class="store-grid">
+      <a class="store-card official" href="https://www.quanticdream.com/en/detroit-become-human" target="_blank" rel="noopener">
+        <span class="store-no">01</span><span class="store-platform">QUANTIC DREAM</span><h4>OFFICIAL<br>DATABASE</h4><small>GAME PAGE // TRAILERS // FEATURES // SPECS</small><b class="store-arrow">↗</b>
+      </a>
+      <a class="store-card" href="https://store.steampowered.com/agecheck/app/1222140/" target="_blank" rel="noopener">
+        <span class="store-no">02</span><span class="store-platform">STEAM</span><h4>DETROIT:<br>BECOME HUMAN</h4><small>PC // OFFICIAL STORE</small><b class="store-arrow">↗</b>
+      </a>
+      <a class="store-card" href="https://store.epicgames.com/p/detroit-become-human" target="_blank" rel="noopener">
+        <span class="store-no">03</span><span class="store-platform">EPIC GAMES</span><h4>DETROIT:<br>BECOME HUMAN</h4><small>PC // OFFICIAL STORE</small><b class="store-arrow">↗</b>
+      </a>
+    </div>
+  </div>
+  <div class="download-warning"><span>◉</span> THIS SHOWCASE DOES NOT DISTRIBUTE GAME FILES. USE THE OFFICIAL STORES ABOVE TO PURCHASE OR DOWNLOAD THE GAME/DEMO.</div>
+</section>
+
+<section class="section network">
+  <div class="network-card">
+    <div><span class="eyebrow">CYBERLIFE NETWORK</span><h2>YOUR ARCHIVE IS<br><strong>CONNECTED.</strong></h2></div>
+    <div class="network-metrics"><span>SYNC <b>100%</b></span><span>MEMORY <b>7.2 TB</b></span><span>STATUS <b>ONLINE</b></span></div>
+    <a href="https://www.quanticdream.com/en/detroit-become-human" target="_blank" rel="noopener" class="btn">DOWNLOAD / OFFICIAL LINKS ↗</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <b>DETROIT // BECOME HUMAN</b>
+  <span>FAN-MADE INTERFACE • © QUANTIC DREAM / SONY INTERACTIVE ENTERTAINMENT</span>
+  <span>FAN-MADE SHOWCASE // NOT AFFILIATED WITH QUANTIC DREAM</span>
+</footer>
+
+<div id="searchPanel" class="overlay-panel">
+  <button class="close" data-close>×</button>
+  <span class="eyebrow">CYBERLIFE SEARCH</span>
+  <h2>SEARCH ARCHIVE</h2>
+  <input id="searchInput" placeholder="Try: Connor, deviant, Markus..." autocomplete="off">
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+<div id="profileModal" class="modal">
+  <button class="close" data-close>×</button>
+  <div class="modal-inner">
+    <span class="eyebrow">PERSONNEL FILE // CLASSIFIED</span>
+    <h2 id="modalName">CONNOR</h2>
+    <div class="modal-grid"><div id="modalModel"></div><div id="modalBody"></div></div>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <button class="close" data-close>×</button><img id="lightboxImg" src="" alt="">
+</div>
+
+<div id="toast" class="toast">SYSTEM MESSAGE</div>
+<div class="systembar"><span>CYBERLIFE</span><i></i><span id="clock">00:00:00</span><span id="pageCode">SYS.00</span><span>EN</span></div>
+<script src="script.js"></script>
+</body>
+</html>
